@@ -1,8 +1,6 @@
 package me.money.star.client.modules.render;
 
 import me.money.star.client.gui.modules.Module;
-import me.money.star.client.modules.client.Colors;
-import me.money.star.client.modules.combat.LegacyCrystal;
 import me.money.star.client.settings.Setting;
 
 import java.awt.*;
@@ -23,5 +21,4 @@ public class HoleESP extends Module {
     {
         return range.getValue();
     }
-
 }

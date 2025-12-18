@@ -1,6 +1,5 @@
 package me.money.star.client.modules.world;
 
-
 import com.google.common.eventbus.Subscribe;
 import me.money.star.client.gui.modules.Module;
 import me.money.star.client.settings.Setting;
@@ -10,7 +9,7 @@ import me.money.star.util.traits.Util;
 import me.money.star.util.world.FakePlayerEntity;
 
 public class FakePlayer extends Module {
-    //
+
     private FakePlayerEntity fakePlayer;
 
     public Setting<String> name = str("Name", "Aleksander Nevskiy");

@@ -14,23 +14,17 @@ import net.minecraft.item.Items;
 import net.minecraft.network.packet.s2c.play.PlaySoundS2CPacket;
 import net.minecraft.sound.SoundEvents;
 
-
-
 public class AutoFish extends Module {
-    //
+
     public Setting<Boolean> openInventory = bool("OpenInventory", true);
     public Setting<Integer> castDelay = num("CastingDelay", 15, 10, 25);
 
     public Setting<Float> maxSoundDist = num("MaxSoundDist", 2.0f, 0f, 5.0f);
 
-
     private boolean autoReel;
     private int autoReelTicks;
     private int autoCastTicks;
 
-    /**
-     *
-     */
     public AutoFish() {
         super("AutoFish", "Automatically casts and reels fishing rods",
                Category.WORLD,true,false,false);

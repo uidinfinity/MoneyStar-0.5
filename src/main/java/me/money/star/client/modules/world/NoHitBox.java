@@ -1,9 +1,7 @@
 package me.money.star.client.modules.world;
 
-
 import me.money.star.client.gui.modules.Module;
 import me.money.star.client.settings.Setting;
-
 
 public class NoHitBox extends Module {
     public NoHitBox(){

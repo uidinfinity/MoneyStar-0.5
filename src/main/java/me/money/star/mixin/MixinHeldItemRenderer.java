@@ -59,9 +59,6 @@ public class MixinHeldItemRenderer {
         }
     }
 
-
-
-
 //    @Inject(method = "applyEatOrDrinkTransformation", at = @At(value = "HEAD"), cancellable = true)
 //    private void hookApplyEatOrDrinkTransformation(MatrixStack matrices, float tickDelta, Arm arm, ItemStack stack, CallbackInfo ci) {
 //        ci.cancel();

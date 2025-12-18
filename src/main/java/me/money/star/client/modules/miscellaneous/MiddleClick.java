@@ -21,10 +21,7 @@ import net.minecraft.screen.slot.SlotActionType;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 
-
 public class MiddleClick extends Module {
-
-    //
 
     public Setting<Boolean> friend = bool("Friend", true);
     public Setting<Boolean> pearl = bool("Pearl", false);

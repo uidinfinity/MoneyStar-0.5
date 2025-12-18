@@ -1,6 +1,5 @@
 package me.money.star.mixin;
 
-
 import me.money.star.MoneyStar;
 import me.money.star.client.modules.render.Environment;
 import net.minecraft.client.world.ClientWorld;

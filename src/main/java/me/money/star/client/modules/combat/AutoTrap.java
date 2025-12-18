@@ -14,7 +14,6 @@ import me.money.star.util.world.BlastResistantBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.decoration.EndCrystalEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.network.packet.Packet;
@@ -22,8 +21,6 @@ import net.minecraft.network.packet.c2s.play.HandSwingC2SPacket;
 import net.minecraft.network.packet.c2s.play.PlayerInteractEntityC2SPacket;
 import net.minecraft.network.packet.s2c.play.BlockUpdateS2CPacket;
 import net.minecraft.network.packet.s2c.play.BundleS2CPacket;
-import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
-import net.minecraft.network.packet.s2c.play.ExplosionS2CPacket;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
@@ -32,11 +29,9 @@ import net.minecraft.util.math.Vec3i;
 
 import java.util.*;
 
-
 public class AutoTrap extends ObsidianPlacerModule
 {
     private static AutoTrap INSTANCE;
-
 
     public Setting<Float> placeRange = num("Place-Range", 4.0f, 0f, 6.0f);
     public Setting<Boolean> attack = bool("Attack", true);
@@ -48,7 +43,6 @@ public class AutoTrap extends ObsidianPlacerModule
     public Setting<Float> shiftDelay = num("Shift-Delay", 1.0f, 0f, 5.0f);
     public Setting<Boolean> autoDisable = bool("AutoDisable", true);
     public Setting<Boolean> disableDeath = bool("DisableOnDeath", true);
-
 
     private int blocksPlaced;
     private List<BlockPos> surround = new ArrayList<>();
@@ -369,8 +363,6 @@ public class AutoTrap extends ObsidianPlacerModule
         }
         return playerBlocks;
     }
-
-
 
     public boolean isPlacing()
     {

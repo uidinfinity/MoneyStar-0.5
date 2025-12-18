@@ -17,8 +17,6 @@ public class Sprint extends Module {
         super("Sprint", "Automatically sprints",Category.MOVEMENT,true,false,false);
     }
 
-
-
     @Subscribe
     public void onTick(TickEvent event) {
         if (event.getStage() != Stage.PRE) {

@@ -1,6 +1,5 @@
 package me.money.star.client.modules.combat;
 
-
 import com.google.common.eventbus.Subscribe;
 import me.money.star.MoneyStar;
 import me.money.star.client.gui.modules.RotationModule;
@@ -13,7 +12,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BowItem;
-
 
 public class BowAim extends RotationModule {
     public Setting<Boolean> players = bool("Players", true);
@@ -123,6 +121,4 @@ public class BowAim extends RotationModule {
                 || EntityUtil.isNeutral(entity) && neutrals.getValue()
                 || EntityUtil.isPassive(entity) && animals.getValue();
     }
-
-
 }

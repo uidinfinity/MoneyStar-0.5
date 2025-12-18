@@ -42,8 +42,8 @@ public class Modules implements Jsonable, Util {
         modules.add(new AutoCrystal());
         modules.add(new SelfTrap());
         modules.add(new Burrow());
-       // modules.add(new LegacyCrystal());
-       // modules.add(new HoleFiller());
+        modules.add(new LegacyCrystal());
+        modules.add(new HoleFiller());
         modules.add(new AutoTrap());
         modules.add(new AutoMine());
         modules.add(new AutoWeb());
@@ -55,7 +55,7 @@ public class Modules implements Jsonable, Util {
         modules.add(new AutoRespawn());
         modules.add(new ExtraTab());
         modules.add(new AutoLog());
-        //modules.add(new AutoReconnect());
+        modules.add(new AutoReconnect());
         modules.add(new NoAFK());
         //RENDER
         modules.add(new BlockHighlight());
@@ -70,7 +70,7 @@ public class Modules implements Jsonable, Util {
         //MOVEMENT
         modules.add(new Step());
         modules.add(new FastFall());
-        //modules.add(new NoFall());
+        modules.add(new NoFall());
         modules.add(new Velocity());
         modules.add(new Sprint());
         modules.add(new Flight());
@@ -84,8 +84,8 @@ public class Modules implements Jsonable, Util {
         modules.add(new SafeWalk());
         modules.add(new Jesus());
         modules.add(new Parkour());
-        //modules.add(new Speed());
-        //modules.add(new FastSwim());
+        modules.add(new Speed());
+        modules.add(new FastSwim());
         //WORLD
         modules.add(new NoCooldown());
         modules.add(new AirPlace());
@@ -103,7 +103,7 @@ public class Modules implements Jsonable, Util {
         modules.add(new FreeLook());
         modules.add(new SpeedMine());
         modules.add(new StayCamera());
-        //modules.add(new Nuker());
+        modules.add(new Nuker());
 
         //EXPLOIT
         modules.add(new XCarry());
@@ -123,7 +123,7 @@ public class Modules implements Jsonable, Util {
         modules.add(new Notifications());
         modules.add(new AntiCheat());
         modules.add(new Colors());
-       // modules.add(new Discord());
+        //modules.add(new Discord());
     }
 
     public Module getModuleByName(String name) {

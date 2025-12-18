@@ -2,27 +2,17 @@ package me.money.star.client.modules.movement;
 
 import com.google.common.eventbus.Subscribe;
 import me.money.star.MoneyStar;
-import me.money.star.client.System;
 import me.money.star.client.gui.modules.Module;
 import me.money.star.client.settings.Setting;
-import me.money.star.event.Stage;
-import me.money.star.event.impl.TickEvent;
 import me.money.star.event.impl.entity.player.PlayerMoveEvent;
-import me.money.star.event.impl.network.TickMovementEvent;
-import me.money.star.util.math.timer.CacheTimer;
-import me.money.star.util.math.timer.Timer;
 import me.money.star.util.player.EnchantmentUtil;
-import me.money.star.util.traits.Util;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.Item;
 import net.minecraft.registry.tag.FluidTags;
-import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec2f;
 
 public class FastSwim extends Module {
 
-    //
     public Setting<SwimMode> mode = mode("Mode", SwimMode.VANILLA);
     public Setting<Float>  waterSpeed = num("WaterSpeed", 1.0f, 3.0f, 10.0f);
     public Setting<Float> lavaSpeed = num("LavaSpeed", 1.0f, 3.0f, 10.0f);

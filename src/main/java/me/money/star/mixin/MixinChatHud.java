@@ -5,7 +5,6 @@ import com.llamalad7.mixinextras.sugar.Local;
 import me.money.star.client.manager.RenderManager;
 import me.money.star.event.impl.*;
 import me.money.star.mixin.imixin.IChatHudLine;
-//import me.money.star.mixin.imixin.IChatHudLineVisible;
 import me.money.star.util.chat.FormattingUtil;
 import me.money.star.util.traits.Util;
 import net.minecraft.client.MinecraftClient;

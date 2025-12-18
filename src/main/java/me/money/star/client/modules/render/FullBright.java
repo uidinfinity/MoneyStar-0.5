@@ -7,14 +7,12 @@ import me.money.star.event.Stage;
 import me.money.star.event.impl.ClientEvent;
 import me.money.star.event.impl.TickEvent;
 import me.money.star.event.impl.network.GameJoinEvent;
-import me.money.star.event.impl.render.LightmapGammaEvent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 
 public class FullBright extends Module {
 
     public Setting<Mode> mode = mode("Mode", Mode.GAMMA);
-
 
     public FullBright() {
         super("FullBright", "Draws box at the block that you are looking at", Category.RENDER, true, false, false);
@@ -46,8 +44,6 @@ public class FullBright extends Module {
         onEnable();
     }
 
-
-
     @Subscribe
     public void onSettingChange(ClientEvent event)
     {
@@ -66,7 +62,6 @@ public class FullBright extends Module {
             mc.player.addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, -1, 0));
         }
     }
-
 
     public enum Mode
     {

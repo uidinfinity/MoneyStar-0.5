@@ -3,21 +3,12 @@ package me.money.star.client.modules.miscellaneous;
 import com.google.common.eventbus.Subscribe;
 import me.money.star.MoneyStar;
 import me.money.star.client.gui.modules.Module;
-import me.money.star.client.manager.RenderManager;
-import me.money.star.client.modules.client.Colors;
 import me.money.star.client.settings.Setting;
-import me.money.star.event.impl.PlayerListColumnsEvent;
-import me.money.star.event.impl.PlayerListIconEvent;
-import me.money.star.event.impl.gui.hud.PlayerListEvent;
 import me.money.star.event.impl.gui.hud.PlayerListNameEvent;
-import me.money.star.util.traits.Util;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 
 import java.awt.*;
-
 
 public class ExtraTab extends Module {
 
@@ -82,5 +73,3 @@ public class ExtraTab extends Module {
         return builder.toString();
     }
 }
-
-

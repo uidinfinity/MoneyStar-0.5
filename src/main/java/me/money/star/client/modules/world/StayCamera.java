@@ -22,11 +22,10 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec2f;
 import net.minecraft.util.math.Vec3d;
 
-
 public final class StayCamera extends Module {
+
     private static StayCamera INSTANCE;
     public Setting<Boolean> rotate = bool("Rotate", false);
-
 
     public Vec3d position, lastPosition;
 
@@ -234,4 +233,3 @@ public final class StayCamera extends Module {
         CAMERA
     }
 }
-

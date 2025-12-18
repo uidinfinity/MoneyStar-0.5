@@ -48,7 +48,6 @@ import java.awt.*;
 import java.util.Comparator;
 import java.util.stream.Stream;
 
-
 public class Aura extends CombatModule
 {
     private static Aura INSTANCE;

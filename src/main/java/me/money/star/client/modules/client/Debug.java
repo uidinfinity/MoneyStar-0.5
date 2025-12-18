@@ -3,7 +3,6 @@ package me.money.star.client.modules.client;
 import me.money.star.client.gui.modules.ConcurrentModule;
 import me.money.star.client.settings.Setting;
 
-
 public class Debug extends ConcurrentModule {
     public static Debug INSTANCE = new Debug();
     public Setting<Boolean> desc = bool("Descriptions", false);
@@ -19,5 +18,4 @@ public class Debug extends ConcurrentModule {
         super("Debug", "More settings", Category.CLIENT, true, false, false);
         INSTANCE = this;
     }
-
 }

@@ -92,7 +92,6 @@ public class LogoutSpots extends Module {
                 RenderUtil.drawBox(matrixStack.getMatrix(), ((AccessorEntity) data).getDimensions().getBoxAt(data.getPos()),Colors.getInstance().rainbow.getValue() ? ColorUtil.rainbow(Colors.getInstance().rainbowHue.getValue()) : color, line.getValue());
                 RenderUtil.drawBoxFilled(matrixStack.getMatrix(), ((AccessorEntity) data).getDimensions().getBoxAt(data.getPos()),Colors.getInstance().rainbow.getValue() ? ColorUtil.rainbow(Colors.getInstance().rainbowHue.getValue()) : new Color(Colors.getInstance().red.getValue(), Colors.getInstance().green.getValue(), Colors.getInstance().blue.getValue(),75));
             }
-
         }
     }
 }

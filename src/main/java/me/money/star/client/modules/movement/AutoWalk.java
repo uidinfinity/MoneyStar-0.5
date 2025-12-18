@@ -7,7 +7,6 @@ import me.money.star.event.Stage;
 import me.money.star.event.impl.TickEvent;
 import me.money.star.util.traits.Util;
 
-
 public class AutoWalk extends Module {
 
     public AutoWalk() {

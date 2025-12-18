@@ -14,15 +14,15 @@ import me.money.star.event.impl.render.entity.RenderFireworkRocketEvent;
 import me.money.star.event.impl.render.entity.RenderItemEvent;
 import me.money.star.event.impl.render.entity.RenderWitherSkullEvent;
 import me.money.star.event.impl.toast.RenderToastEvent;
-import me.money.star.mixin.accessor.AccessorFireworkRocketEntity;
 import net.minecraft.client.gui.screen.DownloadingTerrainScreen;
 import net.minecraft.entity.Entity;
 
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
-import net.minecraft.registry.tag.FluidTags;
+
 public class NoRender extends Module {
+
     private static NoRender INSTANCE;
     public Setting<Boolean> hurtCam  = bool("NoHurtCam", false);
     public Setting<Boolean> armor  = bool("Armor", false);
@@ -287,8 +287,6 @@ public class NoRender extends Module {
         }
     }
 
-
-
     public enum FogRender
     {
         CLEAR,
@@ -303,5 +301,3 @@ public class NoRender extends Module {
         OFF
     }
 }
-
-

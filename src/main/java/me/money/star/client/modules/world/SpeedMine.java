@@ -2,16 +2,13 @@ package me.money.star.client.modules.world;
 
 import com.google.common.eventbus.Subscribe;
 import me.money.star.MoneyStar;
-import me.money.star.client.gui.modules.BlockPlacerModule;
 import me.money.star.client.gui.modules.CombatModule;
 import me.money.star.client.modules.client.AntiCheat;
-import me.money.star.client.modules.combat.AutoFeetPlace;
 import me.money.star.client.modules.combat.AutoMine;
 import me.money.star.client.settings.Setting;
 import me.money.star.event.Stage;
 import me.money.star.event.impl.ClientEvent;
 import me.money.star.event.impl.TickEvent;
-import me.money.star.event.impl.UpdateEvent;
 import me.money.star.event.impl.network.AttackBlockEvent;
 import me.money.star.event.impl.network.PacketEvent;
 import me.money.star.mixin.accessor.AccessorClientPlayerInteractionManager;
@@ -31,13 +28,9 @@ import net.minecraft.network.packet.s2c.play.BlockUpdateS2CPacket;
 import net.minecraft.network.packet.s2c.play.BundleS2CPacket;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.*;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 
 import java.awt.*;
-import java.util.HashMap;
-import java.util.Map;
 
 public final class SpeedMine extends CombatModule
 {
@@ -53,8 +46,6 @@ public final class SpeedMine extends CombatModule
     public Setting<Boolean>  switchReset = bool("switchReset", false);
     public Setting<Boolean>  instant = bool("instant", false);
 
-
-    
     private FirstOutQueue<MiningData> miningQueue = new FirstOutQueue<>(2);
     private long lastBreak;
     public SpeedMine()
@@ -66,7 +57,6 @@ public final class SpeedMine extends CombatModule
     {
         return INSTANCE;
     }
-
 
     @Override
     public void onDisable()

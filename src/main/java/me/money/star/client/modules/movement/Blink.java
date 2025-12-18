@@ -16,23 +16,17 @@ import net.minecraft.network.packet.c2s.play.*;
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-
     public class Blink extends Module {
         public Setting<Boolean> pulse = bool("Pulse", false);
 
         public Setting<Boolean> render = bool("Render", true);
         public Setting<Float> factor = num("Factor ", 1.0f, 0.0f, 10.0f);
 
-
-    //
     private FakePlayerEntity serverModel;
-    //
+
     private boolean blinking;
     private final Queue<Packet<?>> packets = new LinkedBlockingQueue<>();
 
-    /**
-     *
-     */
     public Blink() {
         super("Blink", "Withholds packets from the server, creating clientside lag", Category.MOVEMENT,true,false,false);
     }
@@ -99,6 +93,4 @@ import java.util.concurrent.LinkedBlockingQueue;
             packets.add(event.getPacket());
         }
     }
-
-
 }

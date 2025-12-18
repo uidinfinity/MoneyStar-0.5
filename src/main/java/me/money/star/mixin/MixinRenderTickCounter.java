@@ -1,6 +1,5 @@
 package me.money.star.mixin;
 
-
 import me.money.star.MoneyStar;
 import net.minecraft.client.render.RenderTickCounter;
 import org.spongepowered.asm.mixin.Mixin;

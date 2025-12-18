@@ -10,9 +10,7 @@ import me.money.star.util.math.timer.Timer;
 import me.money.star.util.player.MovementUtil;
 import me.money.star.util.traits.Util;
 
-
 public class Flight extends Module {
-
 
     public Setting<FlightMode> mode = mode("Mode", FlightMode.NORMAL);
     public Setting<Float> hspeed = num("Speed ", 2.5f, 0.1f, 10.0f);
@@ -22,7 +20,6 @@ public class Flight extends Module {
     public Setting<Float> accelerateSpeed = num("AccelerateSpeed ", 0.2f, 0.1f, 1.0f);
     public Setting<Float> maxSpeed = num("MaxSpeed ", 5.0f, 1.0f, 10.0f);
 
-
     private double speed;
     private final Timer antiKickTimer = new CacheTimer();
     private final Timer antiKick2Timer = new CacheTimer();
@@ -30,8 +27,6 @@ public class Flight extends Module {
     public Flight() {
         super("Flight", "Allows the player to fly in survival", Category.MOVEMENT,true,false,false);
     }
-
-
 
     @Override
     public void onEnable() {
@@ -100,8 +95,6 @@ public class Flight extends Module {
                     (forward * speed * rz) - (strafe * speed * rx));
         }
     }
-
-
 
     private void enableVanillaFly() {
         Util.mc.player.getAbilities().allowFlying = true;

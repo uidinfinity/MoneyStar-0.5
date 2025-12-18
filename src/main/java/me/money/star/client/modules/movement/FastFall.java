@@ -16,21 +16,16 @@ import net.minecraft.util.math.Box;
 
 public class FastFall extends Module {
 
-    //
     public Setting<FallMode> fallMode = mode("Mode", FallMode.STEP);
     public Setting<Float> height = num("Height", 1.0f, 3.0f, 10.0f);
     public Setting<Integer> shiftTicks = num("ShiftTicks", 3, 1, 5);
 
-    //
     private boolean prevOnGround;
-    //
+
     private boolean cancelFallMovement;
     private int fallTicks;
     private final Timer fallTimer = new CacheTimer();
 
-    /**
-     *
-     */
     public FastFall() {
         super("FastFall", "Falls down blocks faster", Category.MOVEMENT,true,false,false);
     }

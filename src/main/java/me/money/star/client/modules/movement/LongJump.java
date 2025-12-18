@@ -18,30 +18,23 @@ import net.minecraft.network.packet.c2s.play.PlayerMoveC2SPacket;
 import net.minecraft.network.packet.s2c.play.PlayerPositionLookS2CPacket;
 import net.minecraft.util.math.Vec2f;
 
-
 public class LongJump extends Module {
-    //
+
     public Setting<JumpMode> mode = mode("Mode", JumpMode.NORMAL);
     public Setting<Float> boost = num("Boost ", 4.5f, 0.1f, 10.0f);
     public Setting<Boolean> autoDisable = bool("AutoDisable", true);
 
-    //
     private int stage;
     private double distance;
     private double speed;
-    //
+
     private int airTicks;
     private int groundTicks;
 
-    /**
-     *
-     */
     public LongJump() {
         super("LongJump", "Allows the player to jump farther",
                 Category.MOVEMENT,true,false,false);
     }
-
-
 
     @Override
     public void onEnable() {

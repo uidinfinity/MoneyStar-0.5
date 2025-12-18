@@ -31,7 +31,6 @@ import net.minecraft.util.math.Vec3i;
 import java.util.List;
 import java.util.*;
 
-
 public class AutoFeetPlace extends ObsidianPlacerModule
 {
     private static AutoFeetPlace INSTANCE;
@@ -48,7 +47,6 @@ public class AutoFeetPlace extends ObsidianPlacerModule
     public Setting<Float> shiftDelay = num("Shift-Delay", 1.0f, 0f, 5.0f);
     public Setting<Boolean> jumpDisable = bool("JumpDisable", true);
     public Setting<Boolean> disableDeath = bool("DisableOnDeath", true);
-
 
     private int blocksPlaced;
     private List<BlockPos> surround = new ArrayList<>();

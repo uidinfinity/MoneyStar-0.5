@@ -51,14 +51,8 @@ public class Colors extends ConcurrentModule {
         }
     }
 
-
-
     @Override
     public void onLoad() {
         MoneyStar.colorManager.setColor(this.red.getValue(), this.green.getValue(), this.blue.getValue(), 255);
     }
-
-
-
-
 }

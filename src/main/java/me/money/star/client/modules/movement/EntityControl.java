@@ -12,10 +12,7 @@ import net.minecraft.entity.passive.LlamaEntity;
 
 public class EntityControl extends Module {
 
-
-
     public Setting<Float> jumpStrength = num("JumpStrength ", 0.7f, 0.1f, 2.0f);
-
 
     public EntityControl() {
         super("EntityControl", "Allows you to steer entities without a saddle",

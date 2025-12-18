@@ -41,5 +41,4 @@ public class MixinGameOptions {
         PerspectiveUpdateEvent perspectiveEvent = new PerspectiveUpdateEvent(perspective);
         Util.EVENT_BUS.post(perspectiveEvent);
     }
-
 }

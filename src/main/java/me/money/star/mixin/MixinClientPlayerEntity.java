@@ -1,11 +1,8 @@
 package me.money.star.mixin;
 
-import me.money.star.MoneyStar;
 import me.money.star.event.DismountVehicleEvent;
 import me.money.star.event.Stage;
 import me.money.star.event.impl.EncodeYawEvent;
-import me.money.star.event.impl.UpdateEvent;
-import me.money.star.event.impl.UpdateWalkingPlayerEvent;
 import me.money.star.event.impl.entity.SwingEvent;
 import me.money.star.event.impl.entity.player.PlayerMoveEvent;
 import me.money.star.util.traits.IClientPlayerEntity;
@@ -59,18 +56,15 @@ public abstract class MixinClientPlayerEntity extends AbstractClientPlayerEntity
     private float lastPitch;
     @Shadow
     private boolean lastOnGround;
-    //
+
     @Shadow
     private int ticksSinceLastPositionPacketSent;
     @Shadow
     private boolean autoJumpEnabled;
-    //
+
     @Unique
     private boolean ticking;
 
-    /**
-     *
-     */
     public MixinClientPlayerEntity()
     {
         // Treating this class as ClientPlayerEntity with mc.player info works
@@ -82,22 +76,18 @@ public abstract class MixinClientPlayerEntity extends AbstractClientPlayerEntity
     @Shadow
     protected abstract void sendSprintingPacket();
 
-    //
     @Shadow
     public abstract boolean isSneaking();
 
     @Shadow
     protected abstract boolean isCamera();
 
-    //
     @Shadow
     protected abstract void autoJump(float dx, float dz);
 
-    //
     @Shadow
     public abstract void tick();
 
-    //
     @Shadow
     protected abstract void sendMovementPackets();
 

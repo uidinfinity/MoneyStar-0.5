@@ -52,5 +52,4 @@ public class CrossHair extends Module {
     private boolean moving() {
         return (mc.player.isSneaking() || MovementUtil.isMoving()  || !mc.player.isOnGround()) && dynamic.getValue();
     }
-
 }

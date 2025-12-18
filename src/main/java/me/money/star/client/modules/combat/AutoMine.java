@@ -3,7 +3,6 @@ package me.money.star.client.modules.combat;
 import com.google.common.eventbus.Subscribe;
 import me.money.star.MoneyStar;
 import me.money.star.client.gui.modules.CombatModule;
-import me.money.star.client.gui.modules.RotationModule;
 import me.money.star.client.modules.client.AntiCheat;
 import me.money.star.client.modules.world.AutoTool;
 import me.money.star.client.modules.world.SpeedMine;
@@ -23,17 +22,13 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ShapeContext;
-import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.EntityPose;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.network.packet.c2s.play.HandSwingC2SPacket;
 import net.minecraft.network.packet.c2s.play.PlayerActionC2SPacket;
 import net.minecraft.network.packet.c2s.play.UpdateSelectedSlotC2SPacket;
 import net.minecraft.network.packet.s2c.play.BlockUpdateS2CPacket;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.*;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
 import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
@@ -41,6 +36,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.*;
 public class AutoMine extends CombatModule {
+
     public Setting<Boolean> auto = bool("Auto", true);
     public Setting<Boolean> strictDirection = bool("StrictDirection", false);
     public Setting<Boolean> avoidSelf = bool("AvoidSelf", false);
@@ -980,5 +976,3 @@ public class AutoMine extends CombatModule {
         OFF
     }
 }
-
-

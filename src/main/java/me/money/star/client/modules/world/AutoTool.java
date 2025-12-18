@@ -2,8 +2,6 @@ package me.money.star.client.modules.world;
 
 import com.google.common.eventbus.Subscribe;
 import me.money.star.client.gui.modules.Module;
-import me.money.star.client.modules.combat.AutoCrystal;
-import me.money.star.client.modules.combat.AutoFeetPlace;
 import me.money.star.event.impl.network.AttackBlockEvent;
 import me.money.star.util.traits.Util;
 import net.minecraft.block.BlockState;

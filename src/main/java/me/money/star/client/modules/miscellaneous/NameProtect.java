@@ -8,7 +8,7 @@ import me.money.star.util.traits.Util;
 
 public class NameProtect extends Module {
 
-    public Setting<String> name = str("Name", "Astolfo");
+    public Setting<String> name = str("Name", "Player");
     public NameProtect() {
         super("NameProtect", "Refactor the player name in chat and tablist",
                 Category.MISC,true,false,false);

@@ -129,6 +129,4 @@ public class Discord extends Module {
     private boolean isOn(int x, int z, int x1, int z1) {
         return mc.player.getX() > x && mc.player.getX() < x1 && mc.player.getZ() > z && mc.player.getZ() < z1;
     }
-
-
 }

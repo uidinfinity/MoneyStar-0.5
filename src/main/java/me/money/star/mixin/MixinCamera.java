@@ -53,8 +53,6 @@ public abstract class MixinCamera {
         }
     }
 
-
-
     @Redirect(method = "update", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/render/Camera;setPos(DDD)V"))
     private void hookUpdatePosition(Camera instance, double x, double y, double z) {
         CameraPositionEvent cameraPositionEvent = new CameraPositionEvent(x, y, z, lastTickDelta);

@@ -15,7 +15,6 @@ import net.minecraft.entity.passive.LlamaEntity;
 import net.minecraft.entity.passive.MuleEntity;
 import net.minecraft.util.Hand;
 
-
 public class AutoMount extends Module {
 
     public Setting<Float> range = num("Range", 4.0f, 0.1f, 6.0f);

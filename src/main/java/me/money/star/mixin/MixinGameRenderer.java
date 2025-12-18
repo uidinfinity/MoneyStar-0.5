@@ -56,10 +56,6 @@ public class MixinGameRenderer implements Util {
     @Shadow private float zoomY;
     @Shadow private float viewDistance;
 
-
-
-
-
     /**
      * @param matrices
      * @param tickDelta
@@ -75,7 +71,6 @@ public class MixinGameRenderer implements Util {
             ci.cancel();
         }
     }
-
 
     /**
      * @param matrices
@@ -155,5 +150,4 @@ public class MixinGameRenderer implements Util {
         }
         return MathHelper.lerp(delta, start, end);
     }
-
 }

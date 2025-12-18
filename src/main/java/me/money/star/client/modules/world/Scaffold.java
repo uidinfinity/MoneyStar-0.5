@@ -26,7 +26,6 @@ public final class Scaffold extends BlockPlacerModule
     public Setting<Boolean>  keepY = bool("keepY", false);
     public Setting<Boolean>  tower = bool("tower", false);
 
-
     private BlockData blockData;
     private BlockData renderData;
     private float[] lastAngles;
@@ -256,8 +255,6 @@ public final class Scaffold extends BlockPlacerModule
         return blockSlot;
     }
 
-
-
     private static class BlockData
     {
         private BlockHitResult hitResult;
@@ -310,5 +307,4 @@ public final class Scaffold extends BlockPlacerModule
         NORMAL,
         GREATEST
     }
-
 }

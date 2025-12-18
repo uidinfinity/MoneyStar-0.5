@@ -11,7 +11,6 @@ import net.minecraft.block.ChestBlock;
 import net.minecraft.block.EnderChestBlock;
 import net.minecraft.network.packet.c2s.play.PlayerInteractBlockC2SPacket;
 
-
 public class NoInteract extends Module {
 
     public NoInteract(){

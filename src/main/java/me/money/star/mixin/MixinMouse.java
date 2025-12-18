@@ -40,5 +40,4 @@ public class MixinMouse {
             instance.changeLookDirection(cursorDeltaX, cursorDeltaY);
         }
     }
-
 }

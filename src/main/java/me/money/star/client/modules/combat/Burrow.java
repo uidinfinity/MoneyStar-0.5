@@ -3,37 +3,22 @@ package me.money.star.client.modules.combat;
 import com.google.common.eventbus.Subscribe;
 import me.money.star.MoneyStar;
 import me.money.star.client.gui.modules.ObsidianPlacerModule;
-import me.money.star.client.modules.world.AirPlace;
 import me.money.star.client.settings.Setting;
 import me.money.star.event.impl.network.DisconnectEvent;
-import me.money.star.event.impl.network.PacketEvent;
 import me.money.star.event.impl.network.PlayerTickEvent;
 import me.money.star.util.math.position.PositionUtil;
-import me.money.star.util.world.BlastResistantBlocks;
 import me.money.star.util.world.EntityUtil;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.ShapeContext;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.decoration.EndCrystalEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.c2s.play.HandSwingC2SPacket;
 import net.minecraft.network.packet.c2s.play.PlayerInteractEntityC2SPacket;
 import net.minecraft.network.packet.c2s.play.PlayerMoveC2SPacket;
-import net.minecraft.network.packet.s2c.play.BlockUpdateS2CPacket;
-import net.minecraft.network.packet.s2c.play.BundleS2CPacket;
-import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
-import net.minecraft.network.packet.s2c.play.ExplosionS2CPacket;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.Vec3i;
 
 import java.util.*;
-
 
 public class Burrow extends ObsidianPlacerModule
 {

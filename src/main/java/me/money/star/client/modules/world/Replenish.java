@@ -1,4 +1,5 @@
 package me.money.star.client.modules.world;
+
 import me.money.star.event.impl.entity.EntityDeathEvent;
 import me.money.star.event.impl.network.DisconnectEvent;
 import me.money.star.event.impl.network.PlayerTickEvent;
@@ -16,13 +17,12 @@ import net.minecraft.screen.slot.SlotActionType;
 import com.google.common.eventbus.Subscribe;
 import me.money.star.client.gui.modules.Module;
 import me.money.star.client.settings.Setting;
-import net.minecraft.util.Hand;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
 public class Replenish extends Module {
     private static Replenish INSTANCE;
-
 
     public Setting<Integer> percent = num("Percent", 30, 1, 80);
     public Setting<Boolean> resistant = bool("Allow-Resistant", false);
@@ -30,7 +30,6 @@ public class Replenish extends Module {
     private final Map<Integer, ItemStack> hotbarCache = new ConcurrentHashMap<>();
 
     private final Timer lastDroppedTimer = new CacheTimer();
-
 
     public Replenish() {
         super("Replenish", "Automatically replaces items in your hotbar", Category.WORLD,true,false,false);

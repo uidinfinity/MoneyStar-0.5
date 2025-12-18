@@ -1,7 +1,7 @@
 package me.money.star.mixin;
+
 import com.llamalad7.mixinextras.sugar.Local;
 import me.money.star.event.impl.Render3DEvent;
-import me.money.star.event.impl.RenderWorldBorderEvent;
 import me.money.star.util.traits.Util;
 import net.minecraft.client.render.*;
 import net.minecraft.client.util.ObjectAllocator;
@@ -32,5 +32,4 @@ public class MixinWorldRenderer {
         stack.pop();
         profiler.pop();
     }
-
 }

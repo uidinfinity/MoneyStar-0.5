@@ -25,25 +25,18 @@ import net.minecraft.util.math.Box;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.shape.VoxelShapes;
 
-
 public class Jesus extends Module {
-    //
     public Setting<JesusMode> mode = mode("Mode", JesusMode.SOLID);
     public Setting<Boolean> strict = bool("Strict", false);
-    //
+
     private int floatTimer = 1000;
     private boolean fluidState;
-    //
+
     private double floatOffset;
 
-    /**
-     *
-     */
     public Jesus() {
         super("Jesus", "Allow player to walk on water", Category.MOVEMENT,true,false,false);
     }
-
-
 
     @Override
     public void onDisable() {

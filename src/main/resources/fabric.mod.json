@@ -1,19 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "money-star-leaked",
+  "id": "money-star-upgrade",
   "version": "${version}",
-  "name": "money-star-leaked",
-  "description": "nadpis na kurtochke pizda и еще феткет лох ебаный",
+  "name": "money-star-upgrade",
+  "description": "upgraded money-star-0.6-beta",
   "authors": [
-    "F3tcat1337 лох ебаный",
-    "F3i4ik лох ебаный",
-    "F3mb0y1337 лох ебаный",
-    "^ ITS ONE MAN ^ лох ебаный"
+    "F3tCat"
   ],
   "contact": {
     "repo": "https://github.com/uidinfinity/money-star-client-leaked"
   },
-  "license": "MIT",
+  "license": "None",
   "environment": "client",
   "accessWidener": "money-star.accesswidener",
   "entrypoints": {

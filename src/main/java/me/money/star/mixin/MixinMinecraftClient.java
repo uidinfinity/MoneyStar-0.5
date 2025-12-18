@@ -31,17 +31,17 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  */
 @Mixin(MinecraftClient.class)
 public abstract class MixinMinecraftClient implements IMinecraftClient {
-    //
+
     @Shadow
     public ClientWorld world;
-    //
+
     @Shadow
     public ClientPlayerEntity player;
-    //
+
     @Shadow
     @Nullable
     public ClientPlayerInteractionManager interactionManager;
-    //
+
     @Shadow
     protected int attackCooldown;
     @Unique
@@ -54,9 +54,6 @@ public abstract class MixinMinecraftClient implements IMinecraftClient {
     @Unique
     private boolean doItemUseCalled;
 
-    /**
-     *
-     */
     @Shadow
     protected abstract void doItemUse();
 
@@ -66,17 +63,11 @@ public abstract class MixinMinecraftClient implements IMinecraftClient {
     @Shadow
     protected abstract boolean doAttack();
 
-    /**
-     *
-     */
     @Override
     public void leftClick() {
         leftClick = true;
     }
 
-    /**
-     *
-     */
     @Override
     public void rightClick() {
         rightClick = true;
@@ -212,6 +203,5 @@ public abstract class MixinMinecraftClient implements IMinecraftClient {
             attackCooldown = 0;
         }
     }
-
 
 }

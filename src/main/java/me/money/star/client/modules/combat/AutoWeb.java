@@ -3,25 +3,19 @@ package me.money.star.client.modules.combat;
 import com.google.common.eventbus.Subscribe;
 import me.money.star.MoneyStar;
 import me.money.star.client.gui.modules.BlockPlacerModule;
-import me.money.star.client.gui.modules.ObsidianPlacerModule;
 import me.money.star.client.settings.Setting;
 import me.money.star.event.impl.network.DisconnectEvent;
 import me.money.star.event.impl.network.PlayerTickEvent;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.math.BlockPos;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 public class AutoWeb extends BlockPlacerModule
 {
     private static AutoWeb INSTANCE;
-
 
     public Setting<Float> range = num("Place-Range", 4.0f, 0f, 6.0f);
     public Setting<Float> enemyRange = num("EnemyRange", 10.0f, 0.1f, 15.0f);
@@ -30,10 +24,8 @@ public class AutoWeb extends BlockPlacerModule
     public Setting<Float> shiftDelayButton = num("Shift-Delay", 1.0f, 0f, 5.0f);
     public Setting<Boolean> disableDeath = bool("DisableOnDeath", true);
 
-
     private int shiftDelay;
     private List<BlockPos> webs = new ArrayList<>();
-
 
 
     public AutoWeb()
@@ -46,8 +38,6 @@ public class AutoWeb extends BlockPlacerModule
     {
         return INSTANCE;
     }
-
-
 
     @Override
     public void onDisable()

@@ -12,8 +12,6 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
 
-
-
 public final class AirPlace extends Module
 {
 

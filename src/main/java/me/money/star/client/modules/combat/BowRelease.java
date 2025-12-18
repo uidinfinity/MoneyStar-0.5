@@ -11,7 +11,6 @@ import net.minecraft.network.packet.c2s.play.PlayerInteractItemC2SPacket;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 
-
 public class BowRelease extends Module {
     public Setting<Integer> ticks = num("Ticks", 3, 3, 20);
 
@@ -30,5 +29,4 @@ public class BowRelease extends Module {
             }
         }
     }
-
 }

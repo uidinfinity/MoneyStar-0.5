@@ -22,11 +22,14 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin( ClientConnection.class )
+
 public class MixinClientConnection {
+
     @Shadow @Nullable private volatile PacketListener packetListener;
     @Shadow private Channel channel;
     @Shadow @Final private NetworkSide side;
     @Shadow @Final private static Logger LOGGER;
+
     @Inject(method = "exceptionCaught", at = @At("HEAD"), cancellable = true)
     private void hookExceptionCaught(ChannelHandlerContext context, Throwable ex, CallbackInfo ci) {
         if (MoneyStar.moduleManager.getModuleByClass(AntiCheat.class).isPacketKick()) {
@@ -88,6 +91,4 @@ public class MixinClientConnection {
             ci.cancel();
         }
     }
-
-
 }

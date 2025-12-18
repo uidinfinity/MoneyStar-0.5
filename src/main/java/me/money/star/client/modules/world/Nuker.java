@@ -26,9 +26,9 @@ import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.Queue;
 
-
 import java.util.*;
 import java.util.List;
+
 public final class Nuker extends CombatModule
 {
     private static Nuker INSTANCE;
@@ -45,9 +45,6 @@ public final class Nuker extends CombatModule
     public Setting<Boolean> swapBefore = bool("SwapBefore", false);
     public Setting<Boolean>  doubleBreak = bool("doubleBreak", false);
     public Setting<Boolean>  switchReset = bool("switchReset", false);
-
-
-
 
     private MineData packetMine, instantMine; // mining2 should always be the instant mine
     private boolean packetSwapBack;
@@ -654,7 +651,6 @@ public final class Nuker extends CombatModule
             return AutoTool.getInstance().getBestToolNoFallback(getState());
         }
     }
-
 
     public enum Selection
     {

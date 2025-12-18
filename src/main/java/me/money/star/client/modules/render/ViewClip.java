@@ -18,5 +18,4 @@ public class ViewClip extends Module {
         event.cancel();
         event.setDistance(distance.getValue());
     }
-
 }

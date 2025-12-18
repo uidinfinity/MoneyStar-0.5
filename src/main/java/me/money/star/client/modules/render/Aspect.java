@@ -10,6 +10,4 @@ public class Aspect extends Module {
     public Aspect() {
         super("Aspect", "Draws box at the block that you are looking at", Category.RENDER, true, false, false);
     }
-
-
 }

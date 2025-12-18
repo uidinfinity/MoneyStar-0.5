@@ -7,7 +7,6 @@ import net.minecraft.block.Blocks;
 
 public class IceSpeed extends Module {
 
-
     public IceSpeed() {
         super("IceSpeed", "Modifies the walking speed on ice",
                 Category.MOVEMENT,true,false,false);

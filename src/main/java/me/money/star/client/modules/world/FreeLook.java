@@ -9,14 +9,11 @@ import net.minecraft.client.option.Perspective;
 import net.minecraft.util.math.MathHelper;
 import me.money.star.client.gui.modules.Module;
 
-
-
 public final class FreeLook extends Module
 {
     private float cameraYaw;
     private float cameraPitch;
     private Perspective perspective;
-
 
     public FreeLook()
     {
@@ -90,5 +87,4 @@ public final class FreeLook extends Module
         this.cameraYaw += g;
         this.cameraPitch = MathHelper.clamp(cameraPitch, -90.0F, 90.0F);
     }
-
 }

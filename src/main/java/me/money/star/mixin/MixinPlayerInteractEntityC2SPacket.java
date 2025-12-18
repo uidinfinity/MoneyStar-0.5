@@ -19,12 +19,11 @@ import org.spongepowered.asm.mixin.Shadow;
 @Mixin(PlayerInteractEntityC2SPacket.class)
 public abstract class MixinPlayerInteractEntityC2SPacket implements IPlayerInteractEntityC2SPacket, Util {
     // Mojang mane wtf ..
-    //
+
     @Shadow
     @Final
     private int entityId;
 
-    //
     @Shadow
     public abstract void write(PacketByteBuf buf);
 
@@ -50,5 +49,3 @@ public abstract class MixinPlayerInteractEntityC2SPacket implements IPlayerInter
         return packetBuf.readEnumConstant(InteractType.class);
     }
 }
-
-

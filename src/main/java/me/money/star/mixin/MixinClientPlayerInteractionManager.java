@@ -1,6 +1,5 @@
 package me.money.star.mixin;
 
-import me.money.star.MoneyStar;
 import me.money.star.event.impl.ItemDesyncEvent;
 import me.money.star.event.impl.SyncSelectedSlotEvent;
 import me.money.star.event.impl.network.AttackBlockEvent;
@@ -12,9 +11,7 @@ import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.network.ClientPlayerInteractionManager;
 import net.minecraft.client.network.SequencedPacketCreator;
 import net.minecraft.client.world.ClientWorld;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.network.packet.c2s.play.PlayerInteractItemC2SPacket;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 
@@ -87,8 +84,6 @@ public abstract class MixinClientPlayerInteractionManager implements Util
             cir.cancel();
         }
     }
-
-
 
     /**
      * @param pos

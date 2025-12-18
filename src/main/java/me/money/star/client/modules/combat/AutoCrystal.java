@@ -78,27 +78,10 @@ public class AutoCrystal extends CombatModule
     public Setting<Boolean>  raytraceS = bool("Raytrace", false);
     public Setting<Boolean>  swing = bool("Swing", true);
 
-
-
-
-
-
-
-
-
-
-
-
     // ROTATE SETTINGS
     public Setting<Boolean> rotate = bool("Rotate", true);
     public Setting<Rotate> strictRotate = mode("YawStep", Rotate.OFF);
     public Setting<Integer> rotateLimit = num("YawStep-Limit", 180, 1, 180);
-
-
-
-
-
-
 
     // TARGET
 
@@ -164,23 +147,19 @@ public class AutoCrystal extends CombatModule
     public Setting<Boolean>  debug = bool("Debug", true);
     public Setting<Boolean>  debugDamage = bool("Debug-Damage", true);
 
-
-
-
-
     private DamageData<EndCrystalEntity> attackCrystal;
     private DamageData<BlockPos> placeCrystal;
-    //
+
     private BlockPos renderPos;
     private double renderDamage;
     private BlockPos renderSpawnPos;
-    //
+
     private Vec3d crystalRotation;
     private boolean attackRotate;
     private boolean rotated;
     private float[] silentRotations;
     private float calculatePlaceCrystalTime = 0;
-    //
+
     private static final Box FULL_CRYSTAL_BB = new Box(0.0, 0.0, 0.0, 1.0, 2.0, 1.0);
     private static final Box HALF_CRYSTAL_BB = new Box(0.0, 0.0, 0.0, 1.0, 1.0, 1.0);
     private final CacheTimer lastAttackTimer = new CacheTimer();

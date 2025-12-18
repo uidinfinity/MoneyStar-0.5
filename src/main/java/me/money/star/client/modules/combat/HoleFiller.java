@@ -21,7 +21,6 @@ import net.minecraft.util.math.Box;
 
 import java.util.*;
 
-
 public class HoleFiller extends ObsidianPlacerModule
 {
     private static HoleFiller INSTANCE;
@@ -38,7 +37,6 @@ public class HoleFiller extends ObsidianPlacerModule
     public Setting<Boolean> autoDisable = bool("AutoDisable", true);
     public Setting<Boolean> disableDeath = bool("DisableOnDeath", true);
 
-
     private int shiftDelay;
 
     private List<BlockPos> fills = new ArrayList<>();
@@ -52,8 +50,6 @@ public class HoleFiller extends ObsidianPlacerModule
     {
         return INSTANCE;
     }
-
-
 
     @Override
     public void onDisable()
@@ -73,7 +69,7 @@ public class HoleFiller extends ObsidianPlacerModule
     @Subscribe
     public void onPlayerTick(PlayerTickEvent event)
     {
-        //
+
         int blocksPlaced = 0;
 
         if (!multitask.getValue() && checkMultitask())
@@ -197,7 +193,6 @@ public class HoleFiller extends ObsidianPlacerModule
             }
         });
     }
-
 
     public boolean isPlacing()
     {

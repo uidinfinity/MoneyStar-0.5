@@ -13,8 +13,6 @@ import net.minecraft.item.Items;
 import net.minecraft.network.packet.c2s.play.PlayerInteractEntityC2SPacket;
 import net.minecraft.text.Text;
 
-
-
 public class AutoLog extends Module {
     public Setting<Float> healthPlayer = num("Health ", 5f, 0.1f, 19f);
     public Setting<Boolean> healthTotem = bool("HealthTotems", true);

@@ -17,13 +17,11 @@ import net.minecraft.screen.slot.SlotActionType;
 
 import java.util.List;
 
-
 public final class Offhand extends Module
 {
     private static final int INVENTORY_SYNC_ID = 0;
     private static final List<Item> HOTBAR_ITEMS = List.of(Items.TOTEM_OF_UNDYING,
             Items.GOLDEN_APPLE, Items.ENCHANTED_GOLDEN_APPLE);
-
 
     public Setting<OffhandItem> mode = mode("Mode", OffhandItem.TOTEM);
     public Setting<Float> healthPlayer = num("Health", 14.0f,0.0f , 36.0f);

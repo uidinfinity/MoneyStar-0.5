@@ -1,12 +1,8 @@
 package me.money.star.mixin;
 
-
-import me.money.star.MoneyStar;
-import me.money.star.client.modules.exploit.Timer;
 import me.money.star.event.impl.render.TickCounterEvent;
 import me.money.star.util.traits.Util;
 import net.minecraft.client.render.RenderTickCounter;
-import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -48,6 +44,4 @@ public class MixinRenderTickCounterDynamic {
             cir.setReturnValue(i);
         }
     }
-
-
 }

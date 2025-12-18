@@ -22,13 +22,11 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import net.minecraft.util.Identifier;
 
-
 import static me.money.star.util.traits.Util.mc;
 
 @Mixin( InGameHud.class )
 public class MixinInGameHud {
 
-    //
     @Shadow
     @Final
     private static Identifier POWDER_SNOW_OUTLINE;
@@ -180,5 +178,4 @@ public class MixinInGameHud {
         RenderOverlayEvent.Hotbar hotbar = new RenderOverlayEvent.Hotbar(context);
         Util.EVENT_BUS.post(hotbar);
     }
-
 }

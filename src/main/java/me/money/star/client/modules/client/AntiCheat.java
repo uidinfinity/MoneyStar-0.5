@@ -26,6 +26,7 @@ public class AntiCheat extends ConcurrentModule {
     public enum Anticheats {
     Grim, NCP, Vanilla,
     }
+
     public Setting<Anticheats> mode = mode("Mode", Anticheats.Vanilla);
 
     public Setting<Boolean> miningFix = bool("Mining-Fix", false);

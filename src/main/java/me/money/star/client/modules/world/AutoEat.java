@@ -2,9 +2,7 @@ package me.money.star.client.modules.world;
 
 import com.google.common.eventbus.Subscribe;
 import me.money.star.MoneyStar;
-import me.money.star.client.gui.MoneyStarGui;
 import me.money.star.client.gui.modules.Module;
-import me.money.star.client.modules.Modules;
 import me.money.star.client.settings.Setting;
 import me.money.star.event.impl.TickEvent;
 import net.minecraft.component.DataComponentTypes;
@@ -17,8 +15,6 @@ public class AutoEat extends Module
 {
 
     public Setting<Float> hunger = num("Hunger", 19.0f, 1.0f, 20.0f);
-
-
 
     public AutoEat()
     {

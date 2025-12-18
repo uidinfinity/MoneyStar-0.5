@@ -16,6 +16,7 @@ import net.minecraft.network.packet.c2s.play.PlayerMoveC2SPacket;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
+
 public class ElytraFlight extends Module {
 
     public Setting<FlyMode> mode = mode("Mode", FlyMode.CONTROL);
@@ -23,12 +24,9 @@ public class ElytraFlight extends Module {
     public Setting<Float> vspeed = num("VerticalSpeed ", 2.5f, 0.1f, 10.0f);
     private float pitch;
 
-
     public ElytraFlight() {
         super("ElytraFlight", "Allows you to fly freely using an elytra", Category.MOVEMENT,true,false,false);
     }
-
-
 
     @Subscribe
     public void onTravel(TravelEvent event) {

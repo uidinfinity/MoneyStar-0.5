@@ -11,9 +11,8 @@ import me.money.star.util.traits.Util;
 import net.minecraft.client.gui.screen.DeathScreen;
 import net.minecraft.util.Formatting;
 
-
 public class AutoRespawn extends Module {
-    //
+
     private boolean respawn;
     public Setting<Boolean> deathCoords = bool("DeathPosition", false);
     public AutoRespawn() {

@@ -1,5 +1,5 @@
 package me.money.star;
- // leaked by 4asik with love <3
+
 import me.money.star.client.manager.client.*;
 import me.money.star.client.manager.combat.PearlManager;
 import me.money.star.client.manager.player.*;
@@ -18,10 +18,10 @@ import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.io.InputStream;
-                    /////////////////////////   Money-Star-0.5-beta+leaked
+
 public class MoneyStar implements ModInitializer, ClientModInitializer {
-    public static final String NAME = "Money-Star";
-    public static final String VERSION = "0.5-beta+leaked";
+    public static final String NAME = "money-star";
+    public static final String VERSION = "0.6-upgrade";
 
     public static float TIMER = 1f;
 
@@ -71,8 +71,6 @@ public class MoneyStar implements ModInitializer, ClientModInitializer {
         blockManager = new BlockManager();
         pearlManager = new PearlManager();
     }
-
-
 
     @Override public void onInitializeClient() {
         eventManager.init();

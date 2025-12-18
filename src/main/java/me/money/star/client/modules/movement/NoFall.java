@@ -12,9 +12,7 @@ import me.money.star.util.traits.Util;
 import net.minecraft.network.packet.c2s.play.PlayerMoveC2SPacket;
 import net.minecraft.world.World;
 
-
 public class NoFall extends Module {
-
 
     public NoFall() {
         super("NoFall", "Prevents all fall damage", Category.MOVEMENT,true,false,false);

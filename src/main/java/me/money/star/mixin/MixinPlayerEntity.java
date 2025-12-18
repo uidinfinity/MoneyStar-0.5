@@ -2,7 +2,6 @@ package me.money.star.mixin;
 
 import me.money.star.MoneyStar;
 import me.money.star.event.Stage;
-import me.money.star.event.impl.entity.player.PlayerJumpEvent;
 import me.money.star.event.impl.entity.player.PushFluidsEvent;
 import me.money.star.event.impl.entity.player.TravelEvent;
 import me.money.star.client.modules.movement.SafeWalk;
@@ -118,5 +117,4 @@ public abstract class MixinPlayerEntity extends LivingEntity implements Util {
             info.setReturnValue(true);
         }
     }
-
 }

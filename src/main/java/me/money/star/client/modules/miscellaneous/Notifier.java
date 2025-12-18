@@ -18,7 +18,6 @@ import net.minecraft.network.packet.s2c.play.EntityStatusS2CPacket;
 
 public class Notifier extends Module {
 
-
     public Setting<Boolean> totemPop = bool("TotemPop", false);
     public Setting<Boolean> visualRange = bool("VisualRange", false);
     public Setting<Boolean> friends = bool("Friends", false);

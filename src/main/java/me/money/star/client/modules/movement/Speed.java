@@ -25,12 +25,9 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec2f;
 import net.minecraft.util.math.Vec3d;
 
-
-
 public class Speed extends Module {
     private static Speed INSTANCE;
 
-    //
     public Setting<SpeedMode> speedMode = mode("Mode", SpeedMode.STRAFE);
     public Setting<Float> speedPlayer = num("Speed", 4.0f, 0.1f, 10.0f);
     public Setting<Float> collisionDistance = num("collision-Distance", 1.5f, 0.5f, 2.0f);
@@ -40,22 +37,18 @@ public class Speed extends Module {
     public Setting<Boolean> timer = bool("Use-Timer", false);
     public Setting<Integer> boostTicksPlayer = num("Boost-Ticks ", 10, 20, 40);
     public Setting<Boolean> speedWater = bool("Speed-In-Water", false);
-    //
+
     private int strafe = 4;
     private boolean accel;
     private int strictTicks;
     private int strictFastTicks;
     private int boostTicks;
-    //
     private double speed;
     private double boostSpeed;
     private double distance;
-    //
     private boolean prevTimer;
 
     private static final float FRICTION = 159.077f;
-
-
 
     public Speed() {
         super("Speed", "Move faster", Category.MOVEMENT,true,false,false);
@@ -67,12 +60,6 @@ public class Speed extends Module {
     {
         return INSTANCE;
     }
-
-
-
-
-
-
 
     @Override
     public void onEnable()

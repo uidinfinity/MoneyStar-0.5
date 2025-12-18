@@ -25,7 +25,7 @@ public class EventManager extends System {
 
     @Subscribe
     public void onUpdate(UpdateEvent event) {
-        Util.mc.getWindow().setTitle("Money-star v1.0-beta");
+        Util.mc.getWindow().setTitle("money-star-0.6-upgrade");
         if (!fullNullCheck()) {
             MoneyStar.moduleManager.onUpdate();
             MoneyStar.moduleManager.sortModules(true);

@@ -3,16 +3,12 @@ package me.money.star.client.modules.combat;
 import com.google.common.eventbus.Subscribe;
 import me.money.star.MoneyStar;
 import me.money.star.client.gui.modules.ObsidianPlacerModule;
-import me.money.star.client.manager.RenderManager;
 import me.money.star.client.modules.world.AirPlace;
 import me.money.star.client.settings.Setting;
 import me.money.star.event.impl.network.DisconnectEvent;
 import me.money.star.event.impl.network.PacketEvent;
 import me.money.star.event.impl.network.PlayerTickEvent;
-import me.money.star.event.impl.render.RenderWorldEvent;
 import me.money.star.util.math.position.PositionUtil;
-import me.money.star.util.render.RenderBuffers;
-import me.money.star.util.render.animation.Animation;
 import me.money.star.util.world.BlastResistantBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
@@ -37,7 +33,6 @@ import java.awt.*;
 import java.util.*;
 import java.util.List;
 
-
 public class SelfTrap extends ObsidianPlacerModule
 {
     private static SelfTrap INSTANCE;
@@ -55,7 +50,6 @@ public class SelfTrap extends ObsidianPlacerModule
     public Setting<Float> shiftDelay = num("Shift-Delay", 1.0f, 0f, 5.0f);
     public Setting<Boolean> autoDisable = bool("JumpDisable", true);
     public Setting<Boolean> disableDeath = bool("DisableOnDeath", true);
-
 
     private int blocksPlaced;
     private List<BlockPos> surround = new ArrayList<>();

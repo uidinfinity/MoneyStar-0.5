@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  */
 @Mixin(FireworkRocketEntity.class)
 public class MixinFireworkRocketEntity implements Util {
-    //
+
     @Shadow
     private int life;
 

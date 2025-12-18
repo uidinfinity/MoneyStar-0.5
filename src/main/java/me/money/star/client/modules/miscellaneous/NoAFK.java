@@ -9,14 +9,12 @@ import me.money.star.util.math.timer.CacheTimer;
 import me.money.star.util.math.timer.Timer;
 import net.minecraft.client.option.KeyBinding;
 
-
 public class NoAFK extends RotationModule {
     public Setting<Boolean> jump = bool("Jump", false);
     public Setting<Boolean> sneak = bool("Sneak", false);
     public Setting<Boolean> rotate = bool("Rotate", false);
     public Setting<Boolean> message = bool("Message", false);
     public Setting<String> text = str("Prefix", "I'm definitely not AFK :^)");
-
 
     private final Timer afkTimer = new CacheTimer();
     private final Timer actionTimer = new CacheTimer();
@@ -70,7 +68,4 @@ public class NoAFK extends RotationModule {
             actionTimer.reset();
         }
     }
-
-
-
 }

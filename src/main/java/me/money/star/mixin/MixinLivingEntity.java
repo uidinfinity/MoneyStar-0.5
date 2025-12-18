@@ -24,14 +24,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  */
 @Mixin(LivingEntity.class)
 public abstract class MixinLivingEntity extends MixinEntity implements Util {
-    //
+
     @Shadow
     protected ItemStack activeItemStack;
 
-
     @Shadow
     public abstract boolean hasStatusEffect(RegistryEntry<StatusEffect> par1);
-
 
     @Shadow
     public abstract float getYaw(float tickDelta);
@@ -65,9 +63,6 @@ public abstract class MixinLivingEntity extends MixinEntity implements Util {
             velocityDirty = true;
         }
     }
-
-
-
 
     /**
      * @param ci

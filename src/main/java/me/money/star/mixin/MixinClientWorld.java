@@ -2,7 +2,6 @@ package me.money.star.mixin;
 
 import me.money.star.MoneyStar;
 import me.money.star.client.modules.client.Colors;
-import me.money.star.client.modules.render.Environment;
 import me.money.star.client.modules.render.SkyColors;
 import me.money.star.event.impl.SkyboxEvent;
 import me.money.star.event.impl.world.AddEntityEvent;
@@ -95,5 +94,4 @@ public abstract class MixinClientWorld {
             info.setReturnValue(color.getRGB());
         }
     }
-
 }

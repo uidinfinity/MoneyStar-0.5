@@ -8,7 +8,6 @@ import me.money.star.event.impl.ClientEvent;
 import me.money.star.event.impl.TickEvent;
 import me.money.star.util.render.font.Fonts;
 
-
 public class Font extends ConcurrentModule {
     public static Font INSTANCE = new Font();
     public Setting<Boolean> antiAlias = bool("Descriptions", false);

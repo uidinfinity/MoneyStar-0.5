@@ -34,7 +34,6 @@ import org.lwjgl.glfw.GLFW;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class NoSlow extends Module {
     public Setting<Boolean> strict = bool("Strict", false);
     public Setting<Boolean> airStrict = bool("AirStrict", false);
@@ -50,23 +49,8 @@ public class NoSlow extends Module {
     public Setting<Boolean> honeyblock = bool("HoneyBlock", false);
     public Setting<Boolean> slimeblock = bool("SlimeBlock", false);
 
-
-
-
-
-
-
-
-
-
-
-
     private boolean sneaking;
-    //
 
-    /**
-     *
-     */
     public NoSlow() {
         super("NoSlow", "Prevents items from slowing down player", Category.MOVEMENT,true,false,false);
     }
@@ -256,6 +240,4 @@ public class NoSlow extends Module {
         }
         return blocks;
     }
-
-
 }

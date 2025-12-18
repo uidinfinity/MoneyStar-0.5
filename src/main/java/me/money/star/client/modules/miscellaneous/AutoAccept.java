@@ -10,8 +10,6 @@ import me.money.star.util.math.timer.CacheTimer;
 import me.money.star.util.math.timer.Timer;
 import net.minecraft.network.packet.s2c.play.ChatMessageS2CPacket;
 
-
-
 public class AutoAccept extends Module {
     private final Timer acceptTimer = new CacheTimer();
     public Setting<Float> delay = num("Delay", 3.0f, 0f, 10.0f);

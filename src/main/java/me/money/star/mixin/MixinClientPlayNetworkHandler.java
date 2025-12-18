@@ -1,7 +1,6 @@
 package me.money.star.mixin;
 
 import me.money.star.event.impl.ChatEvent;
-import me.money.star.event.impl.ServerRotationEvent;
 import me.money.star.event.impl.gui.chat.ChatMessageEvent;
 import me.money.star.event.impl.network.GameJoinEvent;
 import me.money.star.event.impl.network.InventoryEvent;
@@ -9,22 +8,15 @@ import me.money.star.mixin.accessor.AccessorClientConnection;
 import me.money.star.util.traits.IClientPlayNetworkHandler;
 import me.money.star.util.traits.Util;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
-import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.network.ClientConnection;
-import net.minecraft.network.NetworkThreadUtils;
 import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.GameJoinS2CPacket;
 import net.minecraft.network.packet.s2c.play.InventoryS2CPacket;
-import net.minecraft.network.packet.s2c.play.PlayerPositionLookS2CPacket;
-import net.minecraft.network.packet.s2c.play.PositionFlag;
-import net.minecraft.util.math.Vec3d;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
-import static me.money.star.util.traits.Util.mc;
 
 /**
  * @author linus
@@ -81,6 +73,4 @@ public abstract class MixinClientPlayNetworkHandler implements IClientPlayNetwor
         Util.EVENT_BUS.post(event);
         if (event.isCancelled()) ci.cancel();
     }
-
-
 }

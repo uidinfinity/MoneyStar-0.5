@@ -15,16 +15,13 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 
-
 public class Trigger extends Module {
 
-    //
     public Setting<TriggerMode> mode = mode("Mode", TriggerMode.Normal);
 
     public Setting<Float> attackSpeed = num("Attack-Speed", 8.0f, 0.1f, 20.0f);
     public Setting<Float> randomSpeed = num("Random-Speed", 2.0f, 0.1f, 10.0f);
 
-    //
     private final Timer triggerTimer = new CacheTimer();
 
 

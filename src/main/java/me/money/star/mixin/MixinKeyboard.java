@@ -1,6 +1,5 @@
 package me.money.star.mixin;
 
-
 import me.money.star.event.impl.KeyEvent;
 import me.money.star.util.traits.Util;
 import net.minecraft.client.Keyboard;
@@ -8,7 +7,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
 
 @Mixin(Keyboard.class)
 public class MixinKeyboard {

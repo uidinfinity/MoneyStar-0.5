@@ -210,5 +210,4 @@ public abstract class MixinEntity implements Util {
             cir.setReturnValue(false);
         }
     }
-
 }

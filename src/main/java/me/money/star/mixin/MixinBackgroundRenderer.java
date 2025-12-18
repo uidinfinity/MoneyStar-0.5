@@ -3,20 +3,14 @@ package me.money.star.mixin;
 import me.money.star.MoneyStar;
 import me.money.star.client.modules.client.Colors;
 import me.money.star.client.modules.render.SkyColors;
-import me.money.star.event.impl.BlindnessEvent;
-import me.money.star.util.traits.Util;
 import net.minecraft.client.render.BackgroundRenderer;
 import net.minecraft.client.render.Camera;
-import net.minecraft.entity.Entity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArgs;
 import org.joml.Vector4f;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 import java.awt.*;
-
 
 @Mixin(BackgroundRenderer.class)
 public class MixinBackgroundRenderer
@@ -37,6 +31,4 @@ public class MixinBackgroundRenderer
             }
         }
     }
-
-
 }
